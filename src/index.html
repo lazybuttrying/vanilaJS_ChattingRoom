@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="user-container">
+      <label for="nickname">대화명</label>
+      <input type="text" id="nickname">
+    </div>
+
+    <!-- 하드코딩으로 바꾼 뒤 css 처리하기 -->
+    <div class="display-container">
+      <ul class="chatting-list">
+        <!-- 삭제 -->
+        <!-- <li class="sent">
+          chat.js의 LiModel 함수로 옮김
+
+        </li>
+        <li class="received">
+          
+        </li> -->
+      </ul>
+    </div>
+    <div class="input-container">
+      <input type="text" class="chatting-input">
+      <button class="send-button">전송</button>
+    </div>
+  </div>
+
+
+  <!-- 라이브러리 가져오기 -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+
+</html>

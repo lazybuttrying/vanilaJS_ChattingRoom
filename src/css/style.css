@@ -1,0 +1,124 @@
+/* css는 html과 화면 분할 하여 작성하기 꼭! */
+*{
+  margin:0;
+  padding:0;
+}
+
+html, body{
+  height: 100%;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; 
+  /* 넘치는 것은 숨기기 */
+}
+.user-container{
+  background: #a9bdce;
+  flex: 1;
+  /* 나머지 덩어리에도 비율을 주어 간격을 조정 */
+
+  
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem; 
+}
+.user-container label{
+  font-size: 14px;
+  margin-right: 1rem;
+}
+.user-container input{
+  border-radius: 3px;
+  border: none;
+  height: 100%;
+}
+.display-container{
+  flex:12;
+  background: #b2c7d9;
+  overflow-y:scroll;
+}
+.input-container {
+  flex:1;
+  display: flex;
+  justify-content: stretch;
+  /* 높이를 center가 아닌 stretch로 하여 처음부터 끝까지 채워주게 함 */
+  align-items: center;
+}
+.input-container span{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding:0.3rem;
+  width: 100%;
+}
+.chatting-input {
+  font-size: 12px;
+  height: 100%;
+  flex: 8;
+  border:none;
+}
+.send-button{
+  flex:1;
+  background: #ffeb33;
+  border:none;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.chatting-list li{
+  width: 90%;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: flex-start;
+
+  /* 시간은 말풍선 아래쪽에 위치하도록 하게 함 */
+  align-items: flex-end;
+  margin-top:0.5rem;
+}
+.profile{
+  display: flex;
+  /* flex 방향이 이렇게 뒤바뀌면 */
+  flex-direction: column;
+  /* align-items와 justify-content의 역할이 서로 바뀜 */
+  align-items: center;
+  justify-content: center;
+}
+.profile .user{
+  font-size: 10px;
+  margin-bottom: 0.3rem;
+}
+.profile .image{
+  border-radius: 50%;
+  object-fit: cover; 
+  /* 이미지가 크기에 맞게 조절됨 */
+  width: 50px;
+  height: 50px;
+
+}
+
+.message{
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 12px;
+  margin: 0 5px;
+  flex:7;
+}
+.time{
+  font-size:10px;
+  margin:  0 5px;
+}
+
+/* 내가 보낸 톡은 오른쪽에 붙도록 정렬 */
+.sent{
+  flex-direction: row-reverse;
+  float:right;
+}
+
+.sent .message {
+  background: #ffeb33;
+}
+.received .message{
+  background: #fff;
+}
